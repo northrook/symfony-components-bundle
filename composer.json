@@ -1,0 +1,31 @@
+{
+  "name": "northrook/symfony-components-bundle",
+  "description": "A component library for Symfony, using Latte.",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin",
+      "email": "mn@northrook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Northrook\\Symfony\\Components\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=8.1",
+    "northrook/types": "dev-main",
+    "northrook/logger": "dev-main",
+    "symfony/config": "^7.0",
+    "symfony/dependency-injection": "^7.0",
+    "symfony/deprecation-contracts": "^3.0",
+    "symfony/http-kernel": "^7.0"
+  },
+  "require-dev": {
+    "northrook/symfony-latte-bundle": "dev-main",
+    "northrook/symfony-stylesheets-bundle": "dev-main"
+  }
+}
