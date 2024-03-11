@@ -26,6 +26,7 @@
   },
   "require-dev": {
     "northrook/symfony-latte-bundle": "dev-main",
-    "northrook/symfony-stylesheets-bundle": "dev-main"
+    "northrook/symfony-stylesheets-bundle": "dev-main",
+    "northrook/symfony-core-bundle": "dev-main"
   }
 }

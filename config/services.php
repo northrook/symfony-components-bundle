@@ -3,6 +3,17 @@
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return static function (ContainerConfigurator $containerConfigurator) {
-    echo 'test';
+return static function ( ContainerConfigurator $container ) {
+
+    $fromRoot = static fn ( string $set = '' ) => $set ? trim(
+        '%kernel.project_dir%' . DIRECTORY_SEPARATOR . trim(
+            str_replace( [ '\\', '/' ], DIRECTORY_SEPARATOR, $set ), DIRECTORY_SEPARATOR,
+        ) . DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR,
+    ) : $set;
+
+    // Parameters
+    $container->parameters()
+              ->set( 'dir.components', $fromRoot( '/src/Components' ) )
+    ;
+
 };
