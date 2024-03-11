@@ -13,7 +13,7 @@ return static function ( ContainerConfigurator $container ) {
 
     // Parameters
     $container->parameters()
-              ->set( 'dir.components', $fromRoot( '/src/Components' ) )
+              ->set( 'dir.components', dirname( __DIR__, 2 ) . DIRECTORY_SEPARATOR . 'src/Components' )
     ;
 
 };
