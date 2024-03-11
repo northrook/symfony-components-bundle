@@ -1,6 +1,6 @@
 <?php
 
-namespace Northrook\Components\Latte;
+namespace Northrook\Symfony\Components;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @link https://github.com/northrook Documentation
  * @todo Update URL to documentation : root of symfony-latte-bundle
  */
-final class SymfonyLatteBundle extends Bundle
+final class SymfonyComponentsBundle extends Bundle
 {
 	public function getPath() : string {
 		return dirname( __DIR__ );
