@@ -2,8 +2,7 @@
 
 namespace Northrook\Symfony\Components;
 
-class Image
+abstract class AbstractComponent
 {
 
-    public function __construct() {}
 }

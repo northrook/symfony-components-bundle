@@ -20,6 +20,7 @@
     "php": ">=8.1",
     "northrook/types": "dev-main",
     "northrook/logger": "dev-main",
+    "northrook/elements": "dev-main",
     "northrook/symfony-core-bundle": "dev-main",
     "symfony/config": "^7.0",
     "symfony/dependency-injection": "^7.0",
