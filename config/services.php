@@ -11,7 +11,7 @@ return static function ( ContainerConfigurator $container ) {
     // Parameters
     $container->parameters()
               ->set(
-                  'dir.components', Str::parameterDirname( '../src/Components' ),
+                  'dir.components', Str::parameterDirname( '../../src/' ),
               )
     ;
 
