@@ -44,7 +44,7 @@ final class LatteComponentPreprocessor extends Preprocessor
             /** @var AbstractComponent $component */
             $class = LatteComponentPreprocessor::FIELDS[ $name ];
 
-            if ( !is_subclass_of( $class, \Northrook\Symfony\Components\Component::class ) ) {
+            if ( !is_subclass_of( $class, \Northrook\Symfony\Components\AbstractComponent::class ) ) {
                 $this->logger->error(
                     message : "{object} is not a subclass of {component}.",
                     context : [
@@ -56,12 +56,11 @@ final class LatteComponentPreprocessor extends Preprocessor
             }
 
             foreach ( $components as $data ) {
-                $component = new ( $class )( $data, $this->get );
+                $component = new ( $class )();
+                $component->setComponentDependencies( $data, $this->get );
                 $this->updateContent( $component->data( 'source', true ), $component->print( true ) );
             }
         }
-
-        return $this;
 
         return $this;
     }
