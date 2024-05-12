@@ -4,6 +4,7 @@ namespace Northrook\Symfony\Components;
 
 use Northrook\Core\Interface\Printable;
 use Northrook\Support\Html;
+use Northrook\Symfony\Components\Component\Button;
 use Northrook\Symfony\Components\Component\Icon;
 use Northrook\Symfony\Core\DependencyInjection\CoreDependencies;
 use Northrook\Symfony\Latte\Preprocessor\Preprocessor;
@@ -40,8 +41,8 @@ final class LatteComponentPreprocessor extends Preprocessor
                 continue;
             }
 
-            /** @var \Northrook\Symfony\Components\AbstractComponent $component */
-            $class = LatteComponentPreprocessor::COMPONENTS[ $name ];
+            /** @var AbstractComponent $component */
+            $class = LatteComponentPreprocessor::FIELDS[ $name ];
 
             if ( !is_subclass_of( $class, \Northrook\Symfony\Components\Component::class ) ) {
                 $this->logger->error(

@@ -86,13 +86,13 @@ abstract class AbstractComponent implements Printable
         array            $data,
         CoreDependencies $get,
     ) : void {
-        $this->data = $data;
-        $this->get  = $get;
+        $this->className = $this->getObjectClassName();
+        $this->data      = $data;
+        $this->get       = $get;
         $this->get->stopwatch?->start( $this->className, 'Component' );
 
-        $this->className = $this->getObjectClassName();
         $this->component = new Element( tag : $this::TAG, class : $this::CLASSES );
-        // $this->component->template = $this->template();
+
         $this->assignProperties();
     }
 
@@ -143,4 +143,15 @@ abstract class AbstractComponent implements Printable
             $this->component->set( 'id', Attribute::id( $id, true ) );
         }
     }
+
+    final public function data( string $get, bool $preserve = true ) : mixed {
+        $data = $this->data[ $get ] ?? null;
+
+        if ( false === $preserve && null !== $data ) {
+            unset( $this->data[ $get ] );
+        }
+
+        return $data;
+    }
+
 }
