@@ -7,6 +7,8 @@ use Northrook\Symfony\Components\AbstractComponent;
 
 class Email extends AbstractComponent
 {
+    protected const TAG = 'field';
+
     protected string  $id;
     protected string  $name;
     protected ?string $value        = null;
@@ -16,7 +18,7 @@ class Email extends AbstractComponent
     protected bool    $required     = false;
 
     public function build() : void {
-        
+
         $this->component->template = <<<HTML
             <div class="label">{label}</div>
             <div class="input">{input}</div>

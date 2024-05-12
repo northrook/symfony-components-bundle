@@ -9,6 +9,7 @@ use Northrook\Symfony\Components\AbstractComponent;
 
 class Password extends AbstractComponent
 {
+    protected const TAG = 'field';
 
     protected string  $id;
     protected string  $name;

@@ -6,6 +6,8 @@ use Northrook\Symfony\Components\AbstractComponent;
 
 class Input extends AbstractComponent
 {
+    protected const TAG = 'field';
+
     public string $name;
     public string $type;
     public string $value;

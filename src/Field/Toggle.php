@@ -2,7 +2,4 @@
 
 namespace Northrook\Symfony\Components\Field;
 
-class Toggle extends Checkbox
-{
-
-}
+class Toggle extends Checkbox { }

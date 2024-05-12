@@ -8,6 +8,7 @@ use Northrook\Symfony\Components\AbstractComponent;
 
 class Checkbox extends AbstractComponent
 {
+    protected const TAG = 'field';
 
     protected string  $id;
     protected string  $name;
