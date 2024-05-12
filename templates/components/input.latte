@@ -1,0 +1,7 @@
+{varType Northrook\Symfony\Components\Field\Input $field}
+<field n:attr="$field->properties()">
+    <label>
+        <span class="label">{$field->label}</span>
+        <input name="{$field->name}" type="{$field->type}" value="{$field->value}" n:attr="$field->inputAttributes">
+    </label>
+</field>

@@ -6,9 +6,10 @@ A collection of reusable components for Symfony, using Latte.
 
 > [!NOTE]
 > This bundle is intended to be used by the [Northrook Symfony Core Bundle][scb].
-> Stand-alone usage is not recommended at this time.
+>
+> Stand-alone usage is **_not_** supported at this time.
 
-Install the bundle stand-aline with Composer:
+Install the bundle stand-alone with Composer:
 
 ```shell
 composer require northrook/symfony-components-bundle
