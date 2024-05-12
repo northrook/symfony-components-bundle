@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://fwrk.dev/schema/dic/fields"
+            targetNamespace="http://fwrk.dev/schema/dic/fields"
+            elementFormDefault="qualified"
+>
+
+
+    <!-- Input Fields - Text, Email, Password -->
+
+    <xsd:element name="password" type="input"/>
+    <xsd:element name="email" type="input"/>
+    <xsd:element name="text" type="input"/>
+
+    <xsd:complexType name="input">
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="value" type="xsd:string" use="required"/>
+        <xsd:attribute name="label" type="xsd:string"/>
+        <xsd:attribute name="required"/>
+        <xsd:attribute name="disabled"/>
+        <xsd:attribute name="autofocus"/>
+        <xsd:attribute name="autocomplete" type="xsd:string"/>
+    </xsd:complexType>
+
+
+    <!-- Choice Fields - Checkbox, Radio, Toggle  -->
+
+    <xsd:element name="checkbox" type="choice"/>
+    <xsd:element name="radio" type="choice"/>
+    <xsd:element name="toggle" type="choice"/>
+
+    <xsd:complexType name="choice">
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="label" type="xsd:string"/>
+        <xsd:attribute name="required"/>
+        <xsd:attribute name="disabled"/>
+        <xsd:attribute name="autofocus"/>
+        <xsd:attribute name="checked"/>
+    </xsd:complexType>
+
+
+    <!-- Select Fields - Select, Combobox -->
+
+    <xsd:element name="combobox" type="combobox"/>
+    <xsd:complexType name="combobox">
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="value" type="xsd:string" use="required"/>
+        <xsd:attribute name="label" type="xsd:string"/>
+        <xsd:attribute name="required"/>
+        <xsd:attribute name="disabled"/>
+        <xsd:attribute name="autofocus"/>
+        <xsd:attribute name="autocomplete" type="xsd:string"/>
+    </xsd:complexType>
+
+</xsd:schema>
