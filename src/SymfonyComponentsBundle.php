@@ -25,7 +25,6 @@ final class SymfonyComponentsBundle extends AbstractBundle
         $container->import( '../config/services.php' );
     }
 
-    // TODO : Can we set the Static Container here ?
     public function build( ContainerBuilder $container ) : void {
         $container->addCompilerPass( new Compiler\LatteEnvironmentPass() );
     }

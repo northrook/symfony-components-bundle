@@ -4,8 +4,8 @@ declare( strict_types = 1 );
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
+use Northrook\Support\File;
 use Northrook\Symfony\Components\LatteComponentPreprocessor;
-use Northrook\Symfony\Core\File;
 
 return static function ( ContainerConfigurator $container ) {
 
