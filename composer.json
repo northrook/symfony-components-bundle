@@ -10,6 +10,9 @@
     }
   ],
   "autoload": {
+    "files": [
+      "global/Field.php"
+    ],
     "psr-4": {
       "Northrook\\Symfony\\Components\\": "src/"
     }
